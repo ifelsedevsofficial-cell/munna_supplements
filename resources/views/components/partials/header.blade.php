@@ -42,7 +42,7 @@
                                         <li class="d-xl-none"><a href="{{ route('shop.login') }}">Login</a></li>
                                         <li class="d-xl-none"><a href="{{ route('shop.register') }}">Signup</a></li>
                                     @endauth
-                                    {{-- <li class="eg-menu__header-search" style="border-right: 0px">
+                                    <li class="eg-menu__header-search" style="border-right: 0px">
                                         <a href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24"
                                                 height="24" x="0" y="0" viewBox="0 0 6.35 6.35"
@@ -56,7 +56,7 @@
                                                 </g>
                                             </svg>
                                         </a>
-                                    </li> --}}
+                                    </li>
                                     </li>
                                 </ul>
                             </div>

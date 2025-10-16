@@ -89,7 +89,7 @@
                         </div> --}}
 
                         <div class="eg-product__categories">
-                            <h3 class="eg-product__sidebar-title">Sub Categories</h3>
+                            <h3 class="eg-product__sidebar-title">Categories</h3>
                             <ul>
                                 @foreach ($subCategories as $subCategory)
                                     <li class="{{ request('sub_category_id') == $subCategory->id ? 'active' : '' }}">

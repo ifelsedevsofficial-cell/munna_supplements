@@ -6,7 +6,9 @@ use Filament\Schemas\Schema;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Support\Facades\Storage;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 
 class SubCategoryForm
 {
@@ -18,6 +20,19 @@ class SubCategoryForm
                     ->label('Name')
                     ->required()
                     ->maxLength(255),
+
+                FileUpload::make('image')
+                    ->label('Category Thumbnail')
+                    ->image()
+                    ->directory('images/sub_categories')
+                    ->disk('public')
+                    ->openable()
+                    ->downloadable()
+                    ->visibility('public')
+                    ->deleteUploadedFileUsing(function ($file) {
+                        Storage::disk('public')->delete($file);
+                    })
+                    ->required(),
 
                 Textarea::make('description')
                     ->label('Description')

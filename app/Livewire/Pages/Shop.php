@@ -35,6 +35,18 @@ class Shop extends Component
             $products->where('sub_category_id', $subCatId);
         }
 
+        if (request('query')) {
+            $query = request('query');
+
+            $products->where(function ($q) use ($query) {
+                $q->where('name', 'like', "%{$query}%")
+                    ->orWhereHas('subCategory', function ($q2) use ($query) {
+                        $q2->where('name', 'like', "%{$query}%");
+                    });
+            });
+
+        }
+
         $products = $products->paginate(5)->withQueryString();
 
         $categories = Category::all();

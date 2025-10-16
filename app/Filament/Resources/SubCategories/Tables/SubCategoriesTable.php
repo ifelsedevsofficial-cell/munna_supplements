@@ -10,6 +10,7 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Actions\ForceDeleteBulkAction;
 
@@ -23,6 +24,13 @@ class SubCategoriesTable
                     ->label('Category Name')
                     ->sortable()
                     ->searchable(),
+
+                ImageColumn::make('image')
+                    ->label('Image')
+                    ->square()
+                    ->visibility('public')
+                    ->disk('public')
+                    ->toggleable(),
 
                 TextColumn::make('description')
                     ->label('Description')
