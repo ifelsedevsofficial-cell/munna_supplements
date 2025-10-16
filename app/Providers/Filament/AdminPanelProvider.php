@@ -124,7 +124,7 @@ class AdminPanelProvider extends PanelProvider
         ]);
 
         FilamentAsset::register([
-            Js::make('custom-scripts'),
+            // Js::make('custom-scripts'),
         ]);
 
         FilamentAsset::registerCssVariables([
