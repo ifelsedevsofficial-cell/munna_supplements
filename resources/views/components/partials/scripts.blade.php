@@ -5,14 +5,14 @@
 
         cartCount = e.detail[0].count;
     });
-    document.addEventListener("livewire:init", () => {
-        Livewire.hook("commit.prepare", () => window.NProgress.start());
-        Livewire.hook("commit", ({
-                succeed
-            }) =>
-            succeed(() => queueMicrotask(() => window.NProgress.done()))
-        );
-    });
+    // document.addEventListener("livewire:init", () => {
+    //     Livewire.hook("commit.prepare", () => window.NProgress.start());
+    //     Livewire.hook("commit", ({
+    //             succeed
+    //         }) =>
+    //         succeed(() => queueMicrotask(() => window.NProgress.done()))
+    //     );
+    // });
 </script>
 
 @if (session('success'))
