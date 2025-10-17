@@ -162,51 +162,79 @@
                 </div>
             </div>
         </div>
+        <style>
+            .category-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                /* 4 per row */
+                gap: 30px;
+                justify-items: center;
+                padding: 20px 0;
+                max-width: 1000px;
+                /* optional: keeps grid centered and tidy */
+                margin: 0 auto;
+            }
+
+            .category-item {
+                text-align: center;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .category-item:hover {
+                transform: translateY(-4px);
+            }
+
+            .category-thumb img {
+                width: 120px;
+                height: 120px;
+                object-fit: contain;
+                border-radius: 10px;
+                background: #f9f9f9;
+                padding: 10px;
+                transition: background 0.2s ease;
+            }
+
+            .category-thumb img:hover {
+                background: #eee;
+            }
+
+            .category-title {
+                margin-top: 10px;
+                font-size: 15px;
+                font-weight: 500;
+                color: #333;
+            }
+
+            @media (max-width: 768px) {
+                .category-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    /* 2 per row on mobile */
+                }
+            }
+        </style>
+
         <div class="container-fluid">
-            <div class="swiper-container eg-product__active">
-                <div class="swiper-wrapper">
-                    @foreach ($categories as $category)
-                        <div class="swiper-slide eg-product__item text-center mb-50 mt-50">
-                            <div class="eg-product__thumb">
-                                <a href="{{ route('shop', ['sub_category_id' => $category->id]) }}"><img
-                                        alt="{{ $category->name }} - Buy Online at Best Price in Pakistan"
-                                        style="max-width:200px; max-height:200px;" loading="lazy" itemprop="image"
-                                        src="{{ asset('storage/' . $category->image) }}" alt="product-thumb"></a>
-                            </div>
-                            <div class="eg-product__content">
-                                <h4 class="eg-product__title"><a
-                                        href="{{ route('shop', ['sub_category_id' => $category->id]) }}">{{ $category->name }}</a>
-                                </h4>
-
-                            </div>
+            <div class="category-grid">
+                @foreach ($categories as $category)
+                    <div class="category-item">
+                        <div class="category-thumb">
+                            <a href="{{ route('shop', ['sub_category_id' => $category->id]) }}">
+                                <img src="{{ asset('storage/' . $category->image) }}"
+                                    alt="{{ $category->name }} - Buy Online at Best Price in Pakistan" loading="lazy"
+                                    itemprop="image">
+                            </a>
                         </div>
-                    @endforeach
-
-                </div>
-                <div class="eg-product__arrow">
-                    <div class="eg-product__next">
-                        <span>
-                            <svg width="21" height="16" viewBox="0 0 21 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.2929L14.3431 0.928933C13.9526 0.538409 13.3195 0.538409 12.9289 0.928933C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM-8.74228e-08 9L20 9L20 7L8.74228e-08 7L-8.74228e-08 9Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </span>
+                        <div class="category-title">
+                            <a href="{{ route('shop', ['sub_category_id' => $category->id]) }}">
+                                {{ $category->name }}
+                            </a>
+                        </div>
                     </div>
-                    <div class="eg-product__prev">
-                        <span>
-                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M1.04083 7.18205C0.650309 7.57258 0.650309 8.20574 1.04083 8.59627L7.40479 14.9602C7.79532 15.3508 8.42848 15.3508 8.81901 14.9602C9.20953 14.5697 9.20953 13.9365 8.81901 13.546L3.16215 7.88916L8.81901 2.23231C9.20953 1.84178 9.20953 1.20862 8.81901 0.818092C8.42848 0.427568 7.79532 0.427568 7.40479 0.818092L1.04083 7.18205ZM21.5183 6.88916L1.74794 6.88916V8.88916L21.5183 8.88916V6.88916Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
+
+
     </section>
 
     @foreach ($categories as $category)

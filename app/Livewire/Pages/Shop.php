@@ -47,7 +47,7 @@ class Shop extends Component
 
         }
 
-        $products = $products->paginate(5)->withQueryString();
+        $products = $products->paginate(9)->withQueryString();
 
         $categories = Category::all();
 

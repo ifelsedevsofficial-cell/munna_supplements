@@ -136,7 +136,7 @@
 		});
 	}
 	back__to_top();
-	
+
 
 	/*=============================================
 	=         09. Mobile Menu Toggle Btn             =
@@ -147,12 +147,12 @@
 	 }
 
    if ($(".eg-mobile__menu").length) {
-		
+
 		var mobileMenuContent = $(".menu-area .eg-menu__main-menu").html();
 		$(".eg-mobile__menu .eg-mobile__menu-box .eg-mobile__menu-outer").append(
 		  mobileMenuContent
 		);
-		
+
 		//Dropdown Button
 		$(".eg-mobile__menu li.eg-menu__has-children .dropdown-btn").on(
 		  "click",
@@ -165,7 +165,7 @@
 		$(".eg-header__mobile-toggler").on("click", function () {
 		  $("body").addClass("eg-mobile__menu-visible");
 		});
-  
+
 		//Menu Toggle Btn
 		$(".eg-mobile__menu-backdrop, .eg-mobile__menu .eg-mobile__close-btn").on(
 		  "click",
@@ -187,7 +187,7 @@
 		});
 	});
 
-	
+
 	/*=============================================
 	=          11. Magnific popup Js              =
 	=============================================*/
@@ -209,7 +209,7 @@
 	=============================================*/
 	new WOW().init();
 
-	
+
 	/*=============================================
 	=          13. Price Filter             =
 	=============================================*/
@@ -231,7 +231,7 @@
 	=============================================*/
 	$(".shop-filter").niceSelect();
 
-	
+
 	/*=============================================
 	=          15. parallax Js             =
 	=============================================*/
@@ -317,7 +317,7 @@ $(".decrement").click(function () {
 			$("html, body").animate({ scrollTop: 0 }, "slow");
 		});
 	});
-		
+
 
 	/*=============================================
 	=          20. Trusted Brand              =
@@ -343,12 +343,12 @@ $(".decrement").click(function () {
 				slidesPerView: 2,
 			},
 			'0': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 		},
 	});
 
-	
+
 	var brandSlider = new Swiper('.eg-brand-2__active', {
 		slidesPerView: 6,
 		loop: true,
@@ -373,7 +373,7 @@ $(".decrement").click(function () {
 				slidesPerView: 2,
 			},
 			'0': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 		},
 	});
@@ -408,10 +408,10 @@ $(".decrement").click(function () {
 				slidesPerView: 2,
 			},
 			'576': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 			'0': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 		},
 	});
@@ -444,10 +444,10 @@ $(".decrement").click(function () {
 				slidesPerView: 2,
 			},
 			'576': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 			'0': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 		},
 	});
@@ -475,10 +475,10 @@ $(".decrement").click(function () {
 				slidesPerView: 2,
 			},
 			'576': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 			'0': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 		},
 	});
@@ -509,10 +509,10 @@ $(".decrement").click(function () {
 				slidesPerView: 1,
 			},
 			'576': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 			'0': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 		},
 	});
@@ -552,7 +552,7 @@ $(".decrement").click(function () {
 			},
 		},
 	});
-		
+
 
 	/*=============================================
 	=          23. instagram js              =
