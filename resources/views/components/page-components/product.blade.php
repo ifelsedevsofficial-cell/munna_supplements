@@ -4,8 +4,14 @@
                    <a href="{{ route('product', ['id' => $product->id, 'name' => Illuminate\Support\Str::slug($product->name)]) }}"
                        title="View details of {{ $product->name }}">
                        <img src="{{ asset("storage/$product->image") }}"
-                           alt="{{ $product->name }} - Buy Online at Best Price in Pakistan"
-                           style="max-width:200px; max-height:200px;" loading="lazy" itemprop="image">
+                           alt="{{ $product->name }} - Buy Online at Best Price in Pakistan" class="img-fluid product-img"
+                           loading="lazy" itemprop="image"
+                           style="width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 12px;
+    padding-inline: 8px;">
                    </a>
                </div>
 
@@ -50,7 +56,8 @@
                                PKR {{ number_format($product->discounted_price, 0) }}
                            </span>
                            <span class="eg-product__badge">
-                               {{ round((($product->original_price - $product->discounted_price) / $product->original_price) * 100) }}% Off
+                               {{ round((($product->original_price - $product->discounted_price) / $product->original_price) * 100) }}%
+                               Off
                            </span>
                            <meta itemprop="availability" content="http://schema.org/InStock">
                        </div>
