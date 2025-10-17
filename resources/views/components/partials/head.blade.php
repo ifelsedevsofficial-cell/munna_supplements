@@ -140,8 +140,55 @@
          }
 
          .floating-whatsapp {
-            bottom: 50px;
+             bottom: 50px;
          }
+     }
+
+     .eg-breadcrumb__area {
+         position: relative;
+         overflow: hidden;
+         /* Prevent shape or circle overflow */
+     }
+
+     .eg-breadcrumb__shape img,
+     .eg-banner__circle-1 {
+         max-width: 100%;
+         height: auto;
+     }
+
+     .scene,
+     .scene-y {
+         overflow: hidden;
+     }
+
+     body {
+         overflow-x: hidden;
+         /* Kill any global horizontal scrollbar */
+     }
+
+     .mobile-category-dropdown {
+         padding: 0 10px;
+     }
+
+     .category-select {
+         width: 100%;
+         border-radius: 12px;
+         border: 1px solid #ddd;
+         padding: 10px 14px;
+         font-size: 16px;
+         background-color: #fff;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+         appearance: none;
+         background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L0 0h12L6 8z' fill='%23333'/%3E%3C/svg%3E");
+         background-repeat: no-repeat;
+         background-position: right 14px center;
+         background-size: 12px;
+     }
+
+     .category-select:focus {
+         border-color: #222;
+         box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.1);
+         outline: none;
      }
  </style>
 
@@ -154,4 +201,3 @@
          }
      </style>
  @endif
-

@@ -167,7 +167,7 @@
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 /* 4 per row */
-                gap: 30px;
+                gap: 8px;
                 justify-items: center;
                 padding: 20px 0;
                 max-width: 1000px;
@@ -185,8 +185,8 @@
             }
 
             .category-thumb img {
-                width: 120px;
-                height: 120px;
+                width: 80px;
+                height: 80px;
                 object-fit: contain;
                 border-radius: 10px;
                 background: #f9f9f9;

@@ -1,5 +1,7 @@
-<div class="col-xl-4 col-md-6" wire:key="product-{{ $product->id }}">
-    <article class="eg-product__item text-center mb-60" itemscope itemtype="https://schema.org/Product">
+<div class="
+{{-- col-6 --}}
+col-md-6 col-xl-4" wire:key="product-{{ $product->id }}">
+    <article class="eg-product__item text-center mb-60 p-6" itemscope itemtype="https://schema.org/Product">
         <div class="eg-product__thumb">
             <a href="{{ route('product', ['id' => $product->id, 'name' => Illuminate\Support\Str::slug($product->name)]) }}"
                 title="View details of {{ $product->name }}">
@@ -50,7 +52,8 @@
                         PKR {{ number_format($product->discounted_price, 0) }}
                     </span>
                     <span class="eg-product__badge">
-                        {{ round((($product->original_price - $product->discounted_price) / $product->original_price) * 100) }}% Off
+                        {{ round((($product->original_price - $product->discounted_price) / $product->original_price) * 100) }}%
+                        Off
                     </span>
                     <meta itemprop="availability" content="http://schema.org/InStock">
                 </div>

@@ -89,27 +89,47 @@
                         </div> --}}
 
                         <div class="eg-product__categories">
-                            <h3 class="eg-product__sidebar-title">Categories</h3>
-                            <ul>
-                                @foreach ($subCategories as $subCategory)
-                                    <li class="{{ request('sub_category_id') == $subCategory->id ? 'active' : '' }}">
-                                        <a href="{{ route('shop', ['sub_category_id' => $subCategory->id]) }}"
-                                            title="Browse products in {{ $subCategory->name }}">
+                            <div class="col-xl-3 col-lg-4 d-none d-md-block">
+                                <h3 class="eg-product__sidebar-title">Categories</h3>
+                                <ul>
+                                    @foreach ($subCategories as $subCategory)
+                                        <li
+                                            class="{{ request('sub_category_id') == $subCategory->id ? 'active' : '' }}">
+                                            <a href="{{ route('shop', ['sub_category_id' => $subCategory->id]) }}"
+                                                title="Browse products in {{ $subCategory->name }}">
+                                                <span class="fa fa-arrow-right" aria-hidden="true"></span>
+                                                {{ $subCategory->name }}
+                                                {{-- - ({{ $subCategory->category->name }}) --}}
+                                            </a>
+                                        </li>
+                                    @endforeach
+
+                                    <!-- Reset filters -->
+                                    <li>
+                                        <a href="{{ route('shop') }}" title="Reset filters">
                                             <span class="fa fa-arrow-right" aria-hidden="true"></span>
-                                            {{ $subCategory->name }}
-                                            {{-- - ({{ $subCategory->category->name }}) --}}
+                                            Reset Filters
                                         </a>
                                     </li>
-                                @endforeach
-
-                                <!-- Reset filters -->
-                                <li>
-                                    <a href="{{ route('shop') }}" title="Reset filters">
-                                        <span class="fa fa-arrow-right" aria-hidden="true"></span>
-                                        Reset Filters
-                                    </a>
-                                </li>
-                            </ul>
+                                </ul>
+                            </div>
+                            <!-- Mobile Category Dropdown -->
+                            <div class="d-md-none mb-4">
+                                <div class="mobile-category-dropdown">
+                                    <select class="form-select form-select-lg category-select"
+                                        onchange="if (this.value) window.location.href=this.value">
+                                        <option value="">Browse Categories</option>
+                                        @foreach ($subCategories as $subCategory)
+                                            <option
+                                                value="{{ route('shop', ['sub_category_id' => $subCategory->id]) }}"
+                                                {{ request('sub_category_id') == $subCategory->id ? 'selected' : '' }}>
+                                                {{ $subCategory->name }}
+                                            </option>
+                                        @endforeach
+                                        <option value="{{ route('shop') }}">Reset Filters</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
 
@@ -136,7 +156,7 @@
                 </div>
                 <div class="col-xl-9 col-lg-8">
                     <div class="eg-product__info-top">
-                        <div class="eg-product__showing-top">
+                        <div class="eg-product__showing-top pt-4 pt-lg-0">
                             <p class="eg-product__showing-text">Showing
                                 {{ $products->firstItem() }}–{{ $products->lastItem() }} of {{ $products->total() }}
                                 Results
@@ -155,7 +175,9 @@
                         @forelse ($products as $product)
                             <x-page-components.product-card :product="$product" />
                         @empty
+                        <span class="p-4">
                             No Products found
+                        </span>
                         @endforelse
                     </div>
                     <div class="eg-postbox__pagination text-center">
