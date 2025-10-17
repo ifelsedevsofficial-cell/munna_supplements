@@ -1,7 +1,7 @@
 <main class="fix">
 
     <!-- breadcrumb-area-start -->
-    <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene">
+    <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scen d-none d-md-block">
         <div class="eg-breadcrumb">
             <div class="container">
                 <div class="row justify-content-center">
@@ -45,6 +45,7 @@
     <!-- breadcrumb-area-start -->
 
     <div class="eg-order__wrapper">
+        <div style="height:100px;" class="d-md-none"></div>
         <h3 class="eg-checkout__title mb-30">Your Orders</h3>
         <div class="table-responsive">
             <table class="table table-bordered align-middle">

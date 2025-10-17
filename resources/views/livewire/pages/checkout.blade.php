@@ -1,7 +1,7 @@
      <main class="fix">
 
          <!-- breadcrumb-area-start -->
-         <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene">
+         <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene d-none d-md-block">
              <div class="eg-breadcrumb">
                  <div class="container">
                      <div class="row justify-content-center">
@@ -42,6 +42,7 @@
          <!-- cart-area-start -->
          <form class="eg-checkout__area mb-120" method="POST" enctype="multipart/form-data"
              action="{{ route('checkout.submit') }}">
+             <div style="height:100px;" class="d-md-none"></div>
              @csrf
              <div class="container">
                  {{-- <div class="eg-checkout__notice mb-15">Returning Customer? <a href="">Click here to Login</a> --}}

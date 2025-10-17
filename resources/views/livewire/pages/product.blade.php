@@ -1,6 +1,6 @@
 <main class="fix" wire:ignore>
     <!-- breadcrumb-area-start -->
-    <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene">
+    <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene d-none d-md-block">
         <div class="eg-breadcrumb">
             <div class="container">
                 <div class="row justify-content-center">
@@ -43,6 +43,7 @@
 
     <!-- product-single-start -->
     <section class="eg-product-single__area pb-120">
+        <div style="height:100px;" class="d-md-none"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -105,12 +106,14 @@
                                     <div x-show="!expanded">
                                         {!! Str::limit($product->description, 300) !!}
                                         <a href="#" @click.prevent="expanded = true"
-                                            style="font-size: 18px; color: skyblue; text-decoration: underline;">see more</a>
+                                            style="font-size: 18px; color: skyblue; text-decoration: underline;">see
+                                            more</a>
                                     </div>
                                     <div x-show="expanded">
                                         {!! $product->description !!}
                                         <a href="#" @click.prevent="expanded = false"
-                                            style="font-size: 18px; color: skyblue; text-decoration: underline;">see less</a>
+                                            style="font-size: 18px; color: skyblue; text-decoration: underline;">see
+                                            less</a>
                                     </div>
                                 </div>
                             @else
@@ -506,7 +509,8 @@
                                                 PKR {{ number_format($product->discounted_price, 0) }}
                                             </span>
                                             <span class="eg-product__badge">
-                                                {{ round((($product->original_price - $product->discounted_price) / $product->original_price) * 100) }}% Off
+                                                {{ round((($product->original_price - $product->discounted_price) / $product->original_price) * 100) }}%
+                                                Off
                                             </span>
                                             <meta itemprop="availability" content="http://schema.org/InStock">
                                         </div>

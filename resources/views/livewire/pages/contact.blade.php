@@ -1,7 +1,7 @@
  <main class="fix">
 
      <!-- breadcrumb-area-start -->
-     <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene">
+     <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene d-none d-md-block">
          <div class="eg-breadcrumb">
              <div class="container">
                  <div class="row justify-content-center">
@@ -46,6 +46,7 @@
 
      <!-- contact form -->
      <section class="eg-contact__area mb-120">
+         <div style="height:100px;" class="d-md-none"></div>
          <div class="container">
              <div class="row">
                  <!-- contact info -->

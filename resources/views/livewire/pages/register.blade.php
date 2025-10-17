@@ -1,7 +1,7 @@
    <main class="fix">
 
        <!-- breadcrumb-area-start -->
-       <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene">
+       <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene d-none d-md-block">
            <div class="eg-breadcrumb">
                <div class="container">
                    <div class="row justify-content-center">
@@ -42,6 +42,7 @@
 
        <!-- login area start -->
        <section class="eg-login__area pb-120 p-relative z-index-1 fix">
+           <div style="height:100px;" class="d-md-none"></div>
            <div class="container">
                <div class="row justify-content-center">
                    <div class="col-xl-6 col-lg-8">
@@ -124,8 +125,8 @@
                                    <div class="eg-login__input-box">
                                        <div class="eg-login__input">
                                            <label for="eg-password__input">Password confirmation</label>
-                                           <input id="eg-password__input" wire:model="password_confirmation" type="password"
-                                               placeholder="Min. 6 characters">
+                                           <input id="eg-password__input" wire:model="password_confirmation"
+                                               type="password" placeholder="Min. 6 characters">
                                            @error('password_confirmation')
                                                <span class="text-danger">{{ $message }}</span>
                                            @enderror

@@ -1,6 +1,6 @@
 <div wire:ignore>
     <!-- breadcrumb-area-start -->
-    <section class="eg-breadcrumb__area theme-bg mb-130 p-relative z-index-1 scene">
+    <section class="eg-breadcrumb__area theme-bg mb-120 p-relative z-index-1 scene d-none d-md-block">
         <div class="eg-breadcrumb">
             <div class="container">
                 <div class="row justify-content-center">
@@ -45,6 +45,7 @@
 
     <!-- product-area-start -->
     <section class="product-area pb-120">
+        <div style="height:100px;" class="d-md-none"></div>
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-4">
@@ -95,7 +96,8 @@
                                     @foreach ($subCategories as $subCategory)
                                         <li
                                             class="{{ request('sub_category_id') == $subCategory->id ? 'active' : '' }}">
-                                            <a href="{{ route('shop', ['sub_category_id' => $subCategory->id]) }}"
+                                            <a class="w-full"
+                                                href="{{ route('shop', ['sub_category_id' => $subCategory->id]) }}"
                                                 title="Browse products in {{ $subCategory->name }}">
                                                 <span class="fa fa-arrow-right" aria-hidden="true"></span>
                                                 {{ $subCategory->name }}
@@ -175,9 +177,9 @@
                         @forelse ($products as $product)
                             <x-page-components.product-card :product="$product" />
                         @empty
-                        <span class="p-4">
-                            No Products found
-                        </span>
+                            <span class="p-4">
+                                No Products found
+                            </span>
                         @endforelse
                     </div>
                     <div class="eg-postbox__pagination text-center">
