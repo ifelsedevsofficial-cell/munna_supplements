@@ -1,5 +1,5 @@
 <!-- Product Card -->
-<div class="col-6 col-sm-6 col-md-4 col-lg-6 col-xl-4" wire:key="product-{{ $product->id }}">
+<div class="col-6 col-sm-6 col-md-4 col-lg-6 col-xl-4" style="margin-block: 8px;" wire:key="product-{{ $product->id }}">
     <article class="eg-product__item text-center p-3" itemscope itemtype="https://schema.org/Product">
 
         <!-- Product Image -->
