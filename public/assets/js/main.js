@@ -28,6 +28,20 @@
 
 ****************************************************/
 
+const searchToggle = document.getElementById("searchToggle");
+const searchBox = document.getElementById("searchBox");
+
+searchToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    searchBox.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+    if (!searchBox.contains(e.target) && !searchToggle.contains(e.target)) {
+        searchBox.classList.remove("active");
+    }
+});
+
 (function ($) {
     "use strict";
 

@@ -42,7 +42,7 @@
                                         <li class="d-xl-none"><a href="{{ route('shop.login') }}">Login</a></li>
                                         <li class="d-xl-none"><a href="{{ route('shop.register') }}">Signup</a></li>
                                     @endauth
-                                    <li class="eg-menu__header-search" style="border-right: 0px">
+                                    {{-- <li class="eg-menu__header-search" style="border-right: 0px">
                                         <a href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24"
                                                 height="24" x="0" y="0" viewBox="0 0 6.35 6.35"
@@ -56,6 +56,33 @@
                                                 </g>
                                             </svg>
                                         </a>
+                                    </li> --}}
+                                    <li class="eg-menu__header-search" style="border-right: 0px; position: relative;">
+                                        <button class="search-toggle" id="searchToggle" aria-label="Toggle search"
+                                            style="background:none;border:none;cursor:pointer;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 6.35 6.35">
+                                                <path
+                                                    d="M2.894.511a2.384 2.384 0 0 0-2.38 2.38 2.386 2.386 0 0 0 2.38 2.384c.56 0 1.076-.197 1.484-.523l.991.991a.265.265 0 0 0 .375-.374l-.991-.992a2.37 2.37 0 0 0 .523-1.485C5.276 1.58 4.206.51 2.894.51zm0 .53c1.026 0 1.852.825 1.852 1.85S3.92 4.746 2.894 4.746s-1.851-.827-1.851-1.853.825-1.852 1.851-1.852z"
+                                                    fill="#fff"></path>
+                                            </svg>
+                                        </button>
+
+                                        <div class="search-box" id="searchBox">
+                                            <form action="{{ route('shop') }}" method="get"
+                                                class="d-flex align-items-center">
+                                                <input type="text" name="query" placeholder="Search..." />
+                                                <button type="submit" class="search-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <line x1="5" y1="12" x2="19"
+                                                            y2="12"></line>
+                                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        </div>
                                     </li>
                                     </li>
                                 </ul>

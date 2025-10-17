@@ -190,6 +190,177 @@
          box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.1);
          outline: none;
      }
+
+     .eg-product__item {
+         background: #fff;
+         border-radius: 12px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         transition: transform 0.3s ease;
+         padding: 16px;
+     }
+
+     .eg-product__item:hover {
+         transform: translateY(-5px);
+     }
+
+     .eg-product__thumb {
+         width: 100%;
+         height: 230px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+         border-radius: 10px;
+         background: #fafafa;
+     }
+
+     .eg-product__thumb img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+         transition: transform 0.3s ease;
+     }
+
+     .eg-product__thumb img:hover {
+         transform: scale(1.05);
+     }
+
+     .eg-product__title a {
+         color: #222;
+         font-weight: 600;
+         text-decoration: none;
+     }
+
+     .eg-product__title a:hover {
+         color: #d32a36;
+     }
+
+     .eg-product__price-new {
+         font-weight: 700;
+         font-size: 18px;
+         color: #d32a36;
+     }
+
+     /* Buttons */
+     .eg-product__btns button {
+         border: none;
+         outline: none;
+         font-size: 14px;
+         padding: 8px 14px;
+         border-radius: 8px;
+         cursor: pointer;
+         font-weight: 600;
+         transition: all 0.3s ease;
+     }
+
+     .btn-cart {
+         background-color: #222;
+         color: #fff;
+     }
+
+     .btn-cart:hover {
+         background-color: #d32a36;
+     }
+
+     /* Discount Badge */
+     .eg-product__badge {
+         position: absolute;
+         top: 10px;
+         right: 10px;
+         background: #d32a36;
+         color: #fff;
+         font-size: 12px;
+         font-weight: 600;
+         padding: 5px 8px;
+         border-radius: 6px;
+         z-index: 5;
+     }
+
+     /* Buy Now Button */
+     .btn-buy {
+         background-color: #d32a36;
+         color: #fff;
+     }
+
+     .btn-buy:hover {
+         background-color: #b0252f;
+     }
+
+
+     /* Responsive Grid Adjustments */
+     @media (max-width: 576px) {
+         .eg-product__thumb {
+             height: 180px;
+         }
+     }
+
+     css for search bar
+
+     /* Inline expanding search box */
+     .eg-menu__header-search {
+         position: relative;
+     }
+
+     .search-box {
+         position: absolute;
+         top: 50%;
+         right: 0;
+         transform: translateY(-50%) scaleX(0);
+         transform-origin: right;
+         opacity: 0;
+         transition: all 0.3s ease;
+         background: #fff;
+         border-radius: 6px;
+         display: flex;
+         align-items: center;
+         overflow: hidden;
+         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+         z-index: 99;
+     }
+
+     .search-box.active {
+         transform: translateY(-50%) scaleX(1);
+         opacity: 1;
+     }
+
+     .search-box input {
+         border: none;
+         outline: none;
+         padding: 8px 12px;
+         width: 180px;
+         font-size: 14px;
+     }
+
+     .search-box .search-btn {
+         background: #d32a36;
+         border: none;
+         color: #fff;
+         padding: 8px 10px;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .search-toggle svg {
+         transition: transform 0.3s ease;
+     }
+
+     .search-toggle:hover svg {
+         transform: scale(1.1);
+     }
+
+     /* Mobile adjustments */
+     @media (max-width: 576px) {
+         .search-box input {
+             width: 130px;
+             font-size: 13px;
+         }
+     }
  </style>
 
  @if (request()->routeIs('product'))

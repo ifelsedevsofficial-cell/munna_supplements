@@ -44,7 +44,7 @@ class Home extends Component
     {
         $categories = SubCategory::with([
             'products' => function ($query) {
-                $query->orderBy('created_at', 'desc')->take(6);
+                $query->inRandomOrder()->take(6);
             }
         ])->get();
 
