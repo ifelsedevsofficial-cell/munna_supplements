@@ -1,6 +1,4 @@
-<div class="
-{{-- col-6 --}}
-col-md-6 col-xl-4" wire:key="product-{{ $product->id }}">
+<div class="col-6 col-md-6 col-xl-4" wire:key="product-{{ $product->id }}">
     <article class="eg-product__item text-center mb-60 p-6" itemscope itemtype="https://schema.org/Product">
         <div class="eg-product__thumb">
             <a href="{{ route('product', ['id' => $product->id, 'name' => Illuminate\Support\Str::slug($product->name)]) }}"
