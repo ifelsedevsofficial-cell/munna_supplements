@@ -90,13 +90,13 @@
                                                             $product['original_price'] > 0 &&
                                                             $product['discounted_price'] < $product['original_price']
                                                     )
-                                                        <div class="eg-product__badge"
+                                                        {{-- <div class="eg-product__badge"
                                                             style="display:inline-block; margin-left: 6px; color:white; font-weight:bold;">
                                                             {{ round((($product['original_price'] - $product['discounted_price']) / $product['original_price']) * 100) }}%
                                                             Off
-                                                        </div>
+                                                        </div> --}}
                                                         <br>
-                                                        <small style="text-decoration: line-through; color: #888;">
+                                                        <small style="text-decoration: line-through; color: #e53935;">
                                                             PKR {{ number_format($product['original_price'], 2) }}
                                                         </small>
                                                     @endif
