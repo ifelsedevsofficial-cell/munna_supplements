@@ -64,7 +64,7 @@
                    </div>
 
                    <!-- Buttons -->
-                   <div class="eg-product__btn d-flex align-items-center justify-content-center">
+                   <div class="d-none eg-product__btn d-md-flex align-items-center justify-content-center">
                        <a wire:click="addToCart({{ $product->id }})" wire:loading.attr="disabled"
                            class="eg-product__cart mr-15" style="cursor: pointer;"
                            title="Add {{ $product->name }} to Cart">

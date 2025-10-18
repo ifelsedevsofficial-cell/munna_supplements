@@ -1,5 +1,5 @@
 <main class="fix">
-    <!-- banner area  -->
+    {{-- <!-- banner area  -->
     <section class="banner__area eg-banner__bg theme-bg text-center scene fix">
         <div class="container">
             <div class="row">
@@ -49,51 +49,31 @@
         <div class="eg-banner__circle-1"></div>
         <div class="eg-banner__circle-2"></div>
     </section>
-    <!-- banner area end -->
+    <!-- banner area end --> --}}
+    <!-- hero slider start -->
+    <section class="hero-slider" style="margin-bottom: 40px;">
+        <div class="hero-slide active" style="background-image: url('assets/img/banner/munna1.png');">
 
-    <!-- brand area  -->
-    <section class="brand__area eg-brand__bg pt-125 pb-130 scene">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="eg-brand__wrapper">
-                        <h5 class="eg-brand__title text-center">Perfect Brand is Featured on</h5>
-                        <div class="eg-brand__wrap">
-                            <div class="swiper-container eg-brand__active">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide eg-brand__item">
-                                        <img src="{{ asset('assets/img/brnad/brand-01.png') }}" alt="">
-                                    </div>
-                                    <div class="swiper-slide eg-brand__item">
-                                        <img src="{{ asset('assets/img/brnad/brand-02.png') }}" alt="">
-                                    </div>
-                                    <div class="swiper-slide eg-brand__item">
-                                        <img src="{{ asset('assets/img/brnad/brand-03.png') }}" alt="">
-                                    </div>
-                                    <div class="swiper-slide eg-brand__item">
-                                        <img src="{{ asset('assets/img/brnad/brand-04.png') }}" alt="">
-                                    </div>
-                                    <div class="swiper-slide eg-brand__item">
-                                        <img src="{{ asset('assets/img/brnad/brand-05.png') }}" alt="">
-                                    </div>
-                                    <div class="swiper-slide eg-brand__item">
-                                        <img src="{{ asset('assets/img/brnad/brand-06.png') }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="eg-brand__shape-1 scene-y">
-            <img class=" layer" data-depth="3" src="assets/img/brnad/brand-shape-1.png" alt="brand-shape">
+
+        <div class="hero-slide" style="background-image: url('assets/img/banner/munna2.png');">
+
         </div>
-        <div class="eg-brand__shape-2 scene-y">
-            <img class=" layer" data-depth="3" src="assets/img/brnad/brand-shape-2.png" alt="brand-shape">
+
+        <div class="hero-slide" style="background-image: url('assets/img/banner/munna3.png');">
+
+        </div>
+        <div class="hero-slide" style="background-image: url('assets/img/banner/munna4.png');">
+
+        </div>
+        <div class="hero-slide" style="background-image: url('assets/img/banner/munna5.png');">
+
+        </div>
+        <div class="hero-slide" style="background-image: url('assets/img/banner/munna6.png');">
+
         </div>
     </section>
-    <!-- brand area end  -->
+    <!-- hero slider end -->
 
     <!-- about area -->
     <section class="about__area eg-about__bg scene">
@@ -162,56 +142,6 @@
                 </div>
             </div>
         </div>
-        <style>
-            .category-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                /* 4 per row */
-                gap: 8px;
-                justify-items: center;
-                padding: 20px 0;
-                max-width: 1000px;
-                /* optional: keeps grid centered and tidy */
-                margin: 0 auto;
-            }
-
-            .category-item {
-                text-align: center;
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
-            }
-
-            .category-item:hover {
-                transform: translateY(-4px);
-            }
-
-            .category-thumb img {
-                width: 80px;
-                height: 80px;
-                object-fit: contain;
-                border-radius: 10px;
-                background: #f9f9f9;
-                padding: 10px;
-                transition: background 0.2s ease;
-            }
-
-            .category-thumb img:hover {
-                background: #eee;
-            }
-
-            .category-title {
-                margin-top: 10px;
-                font-size: 15px;
-                font-weight: 500;
-                color: #333;
-            }
-
-            @media (max-width: 768px) {
-                .category-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                    /* 2 per row on mobile */
-                }
-            }
-        </style>
 
         <div class="container-fluid">
             <div class="category-grid">
@@ -233,7 +163,6 @@
                 @endforeach
             </div>
         </div>
-
 
     </section>
 
@@ -371,6 +300,51 @@
         </div>
     </section>
     <!-- feature area end -->
+
+    <!-- brand area  -->
+    <section class="brand__area eg-brand__bg pt-125 pb-130 scene">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="eg-brand__wrapper">
+                        <h5 class="eg-brand__title text-center">Perfect Brand is Featured on</h5>
+                        <div class="eg-brand__wrap">
+                            <div class="swiper-container eg-brand__active">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide eg-brand__item">
+                                        <img src="{{ asset('assets/img/brnad/brand-01.png') }}" alt="">
+                                    </div>
+                                    <div class="swiper-slide eg-brand__item">
+                                        <img src="{{ asset('assets/img/brnad/brand-02.png') }}" alt="">
+                                    </div>
+                                    <div class="swiper-slide eg-brand__item">
+                                        <img src="{{ asset('assets/img/brnad/brand-03.png') }}" alt="">
+                                    </div>
+                                    <div class="swiper-slide eg-brand__item">
+                                        <img src="{{ asset('assets/img/brnad/brand-04.png') }}" alt="">
+                                    </div>
+                                    <div class="swiper-slide eg-brand__item">
+                                        <img src="{{ asset('assets/img/brnad/brand-05.png') }}" alt="">
+                                    </div>
+                                    <div class="swiper-slide eg-brand__item">
+                                        <img src="{{ asset('assets/img/brnad/brand-06.png') }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="eg-brand__shape-1 scene-y">
+            <img class=" layer" data-depth="3" src="assets/img/brnad/brand-shape-1.png" alt="brand-shape">
+        </div>
+        <div class="eg-brand__shape-2 scene-y">
+            <img class=" layer" data-depth="3" src="assets/img/brnad/brand-shape-2.png" alt="brand-shape">
+        </div>
+    </section>
+    <!-- brand area end  -->
+
 
     {{-- <!-- pricing area -->
     <section class="pricing__area eg-pricing__bg scene">

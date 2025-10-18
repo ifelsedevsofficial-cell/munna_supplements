@@ -51,7 +51,7 @@
             </div>
 
             <!-- Buttons -->
-            <div class="eg-product__btns mt-3 d-flex align-items-center justify-content-center gap-2">
+            <div class="d-none eg-product__btns mt-3 d-md-flex align-items-center justify-content-center gap-2">
                 <button wire:click="addToCart({{ $product->id }})" wire:loading.attr="disabled" class="btn-cart"
                     title="Add {{ $product->name }} to Cart">
                     <img src="{{ asset('assets/img/icon/cart.svg') }}" alt="Cart icon" class="btn-cart-icon">

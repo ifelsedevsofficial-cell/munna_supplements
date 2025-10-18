@@ -361,6 +361,132 @@
              font-size: 13px;
          }
      }
+
+     .category-grid {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         /* 4 per row */
+         gap: 8px;
+         justify-items: center;
+         padding: 20px 0;
+         max-width: 1000px;
+         /* optional: keeps grid centered and tidy */
+         margin: 0 auto;
+     }
+
+     .category-item {
+         text-align: center;
+         transition: transform 0.2s ease, box-shadow 0.2s ease;
+     }
+
+     .category-item:hover {
+         transform: translateY(-4px);
+     }
+
+     .category-thumb img {
+         width: 80px;
+         height: 80px;
+         object-fit: contain;
+         border-radius: 10px;
+         background: #f9f9f9;
+         padding: 10px;
+         transition: background 0.2s ease;
+     }
+
+     .category-thumb img:hover {
+         background: #eee;
+     }
+
+     .category-title {
+         margin-top: 10px;
+         font-size: 15px;
+         font-weight: 500;
+         color: #333;
+     }
+
+     @media (max-width: 768px) {
+         .category-grid {
+             grid-template-columns: repeat(2, 1fr);
+             /* 2 per row on mobile */
+         }
+     }
+
+     .hero-slider {
+         position: relative;
+         width: 100%;
+         height: 100vh;
+         /* full screen */
+         overflow: hidden;
+     }
+
+     .hero-slide {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-size: cover;
+         background-position: center;
+         opacity: 0;
+         transition: opacity 1s ease-in-out;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .hero-slide.active {
+         opacity: 1;
+     }
+
+     .hero-content {
+         text-align: center;
+         color: #fff;
+         background: rgba(0, 0, 0, 0.4);
+         padding: 30px 50px;
+         border-radius: 15px;
+     }
+
+     .hero-content h2 {
+         font-size: 60px;
+         margin-bottom: 15px;
+         font-weight: 700;
+     }
+
+     .hero-content h3 {
+         font-size: 25px;
+         margin-bottom: 25px;
+     }
+
+     .eg-btn {
+         background: #d32a36;
+         color: #fff;
+         padding: 12px 25px;
+         border-radius: 30px;
+         text-transform: uppercase;
+         font-weight: 600;
+         display: inline-flex;
+         align-items: center;
+         gap: 10px;
+         transition: all 0.3s ease;
+     }
+
+     .eg-btn:hover {
+         background: #ff4d58;
+     }
+
+     @media (max-width: 768px) {
+         .hero-content h2 {
+             font-size: 36px;
+         }
+
+         .hero-content h3 {
+             font-size: 18px;
+         }
+
+         .hero-slider {
+             height: 70vh;
+         }
+     }
  </style>
 
  @if (request()->routeIs('product'))
