@@ -173,7 +173,7 @@
                             </select>
                         </div> --}}
                     </div>
-                    <div class="row">
+                    <div class="row g-2">
                         @forelse ($products as $product)
                             <x-page-components.product-card :product="$product" />
                         @empty

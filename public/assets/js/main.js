@@ -415,7 +415,7 @@ document.addEventListener("click", (e) => {
     var productSlider = new Swiper(".eg-product__active", {
         slidesPerView: 6,
         loop: true,
-        spaceBetween: 30,
+        spaceBetween: 8,
         autoplay: true,
         autoplay: {
             delay: 5000,
@@ -450,7 +450,7 @@ document.addEventListener("click", (e) => {
     var product2Slider = new Swiper(".eg-product-2__active", {
         slidesPerView: 4,
         loop: true,
-        spaceBetween: 0,
+        spaceBetween: 8,
         autoplay: true,
         autoplay: {
             delay: 5000,
@@ -485,7 +485,7 @@ document.addEventListener("click", (e) => {
     var product3Slider = new Swiper(".eg-product-3__active", {
         slidesPerView: 4,
         loop: true,
-        spaceBetween: 30,
+        spaceBetween: 8,
         autoplay: true,
         autoplay: {
             delay: 5000,
