@@ -26,6 +26,7 @@
 23. instagram js
 
 
+
 ****************************************************/
 
 const searchToggle = document.getElementById("searchToggle");
@@ -41,6 +42,42 @@ document.addEventListener("click", (e) => {
         searchBox.classList.remove("active");
     }
 });
+
+function scaleFonts() {
+    const baseWidth = 1440; // your design width
+    const scale = window.innerWidth / baseWidth;
+    const ignoreBox = document.querySelector(".marquee-box");
+
+    // Only apply scaling on mobile screens (below 768px)
+    if (window.innerWidth >= 768) {
+        // Reset to original font size if coming back to desktop
+        document.querySelectorAll("*").forEach((el) => {
+            if (ignoreBox && (el === ignoreBox || ignoreBox.contains(el)))
+                return;
+            if (el.dataset.baseFontSize) {
+                el.style.fontSize = `${el.dataset.baseFontSize}px`;
+            }
+        });
+        return;
+    }
+
+    document.querySelectorAll("*").forEach((el) => {
+        if (ignoreBox && (el === ignoreBox || ignoreBox.contains(el))) return;
+
+        const style = window.getComputedStyle(el);
+        const fontSize = parseFloat(style.fontSize);
+
+        if (!el.dataset.baseFontSize) {
+            el.dataset.baseFontSize = fontSize;
+        }
+
+        const newSize = parseFloat(el.dataset.baseFontSize) * scale;
+        el.style.fontSize = `${Math.max(12, newSize)}px`;
+    });
+}
+
+window.addEventListener("resize", scaleFonts);
+window.addEventListener("load", scaleFonts);
 
 (function ($) {
     "use strict";

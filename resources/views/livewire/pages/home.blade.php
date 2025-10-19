@@ -905,5 +905,16 @@
         </div>
     </div>
     <!-- instagram area end --> --}}
+    <script>
+        let heroSlides = document.querySelectorAll('.hero-slide');
+        let current = 0;
 
+        function nextSlide() {
+            heroSlides[current].classList.remove('active');
+            current = (current + 1) % heroSlides.length;
+            heroSlides[current].classList.add('active');
+        }
+
+        setInterval(nextSlide, 4000); // change every 4s
+    </script>
 </main>

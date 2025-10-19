@@ -489,16 +489,13 @@
      }
 
      .marquee-box {
-         background: white;
-         color: red;
+         background: linear-gradient(90deg, #ffefc7, #ffe1d1);
          text-align: center;
-         /* padding: 2px 5px; */
-         font-family: 'Poppins', sans-serif;
-         font-size: 1rem;
-         font-weight: 500;
+         padding: 12px 10px;
+         font-weight: 600;
          position: relative;
          overflow: hidden;
-         height: 50px;
+         height: 60px;
      }
 
      .marquee-text {
@@ -507,7 +504,10 @@
          left: 50%;
          transform: translate(-50%, -50%) scale(0.9);
          opacity: 0;
-         transition: all 0.2s ease;
+         transition: all 0.6s ease;
+         width: 90%;
+         line-height: 1.3em;
+         word-wrap: break-word;
      }
 
      .marquee-text.active {
@@ -523,8 +523,31 @@
      .marquee-text a {
          color: #d33;
          text-decoration: underline;
+         word-break: break-word;
      }
- </style>
+
+     /* 🌐 Responsive Adjustments */
+     @media (max-width: 768px) {
+         .marquee-box {
+             font-size: 0.95rem;
+             height: 55px;
+             padding: 10px 8px;
+         }
+     }
+
+     @media (max-width: 480px) {
+         .marquee-box {
+             font-size: 0.85rem;
+             height: auto;
+             min-height: 50px;
+             padding: 8px 6px;
+         }
+
+         .marquee-text {
+             width: 95%;
+         }
+     }
+</style>
 
  @if (request()->routeIs('product'))
      <style>

@@ -27,20 +27,6 @@
     showNext();
     setInterval(showNext, 2500); // total cycle = 2.5s per slide
 </script>
-
-
-<script>
-    let heroSlides = document.querySelectorAll('.hero-slide');
-    let current = 0;
-
-    function nextSlide() {
-        heroSlides[current].classList.remove('active');
-        current = (current + 1) % heroSlides.length;
-        heroSlides[current].classList.add('active');
-    }
-
-    setInterval(nextSlide, 4000); // change every 4s
-</script>
 <script>
     window.addEventListener('cart-updated', e => {
         console.log('Cart updated event:', e.detail); // DEBUG
