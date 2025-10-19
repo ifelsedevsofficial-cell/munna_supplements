@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-12 d-flex flex-row-reverse justify-content-between align-items-center d-lg-block">
                     <div class="eg-header__mobile-toggler d-block d-xl-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="25" x="0" y="0"
+                        {{-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="25" x="0" y="0"
                             viewBox="0 0 32 32" style="enable-background: new 0 0 512 512" xml:space="preserve"
                             class="">
                             <g>
@@ -22,7 +22,15 @@
                                     d="M11.187 2.275H5a3.003 3.003 0 0 0-3 3v6.186a3.003 3.003 0 0 0 3 3h6.187a3.003 3.003 0 0 0 3-3V5.275a3.003 3.003 0 0 0-3-3zm1 9.186a1.001 1.001 0 0 1-1 1H5a1.001 1.001 0 0 1-1-1V5.275a1.001 1.001 0 0 1 1-1h6.187a1.001 1.001 0 0 1 1 1zM27 2.275h-6.187a3.003 3.003 0 0 0-3 3v6.186a3.003 3.003 0 0 0 3 3H27a3.003 3.003 0 0 0 3-3V5.275a3.003 3.003 0 0 0-3-3zm1 9.186a1.001 1.001 0 0 1-1 1h-6.187a1.001 1.001 0 0 1-1-1V5.275a1.001 1.001 0 0 1 1-1H27a1.001 1.001 0 0 1 1 1zM11.187 17.54H5a3.003 3.003 0 0 0-3 3v6.185a3.003 3.003 0 0 0 3 3h6.187a3.003 3.003 0 0 0 3-3V20.54a3.003 3.003 0 0 0-3-3zm1 9.185a1.001 1.001 0 0 1-1 1H5a1.001 1.001 0 0 1-1-1V20.54a1.001 1.001 0 0 1 1-1h6.187a1.001 1.001 0 0 1 1 1zM27 17.54h-6.187a3.003 3.003 0 0 0-3 3v6.185a3.003 3.003 0 0 0 3 3H27a3.003 3.003 0 0 0 3-3V20.54a3.003 3.003 0 0 0-3-3zm1 9.185a1.001 1.001 0 0 1-1 1h-6.187a1.001 1.001 0 0 1-1-1V20.54a1.001 1.001 0 0 1 1-1H27a1.001 1.001 0 0 1 1 1z"
                                     fill="#fff" data-original="#fff" class=""></path>
                             </g>
+                        </svg> --}}
+
+                        <svg width="25" height="25" style="color:white;" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 18L20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M4 12L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M4 6L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
+
                     </div>
                     <div class="eg-menu__header-search d-xl-none" style="border-right: 0px">
                         <a href="#">
@@ -115,9 +123,9 @@
                                     @if ($settings->site_logo)
                                         <img style="
                                         /* width: 120px; */
-                                        height: 80px;
+                                        /* height: 80px; */
                                         "
-                                            src="{{ asset('storage/' . $settings->site_logo) }}"
+                                            class="logo-header" src="{{ asset('storage/' . $settings->site_logo) }}"
                                             alt="{{ $settings->site_name }} logo">
                                     @else
                                         <span

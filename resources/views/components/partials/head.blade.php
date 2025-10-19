@@ -64,7 +64,7 @@
      }
 
      .eg-product__price-new {
-         color: #888;
+         color: #555555 !important;
          /* bold red */
          font-weight: 700;
          font-size: 1.1rem;
@@ -230,7 +230,7 @@
      }
 
      .eg-product__title a {
-         color: #222;
+         color: #3f3e3e;
          font-weight: 600;
          text-decoration: none;
      }
@@ -556,6 +556,18 @@
              width: 95%;
          }
      }
+
+     .logo-header {
+         height: 80px !important;
+     }
+
+     /* media query for logo */
+     @media (max-width: 480px) {
+         .logo-header {
+             height: 40px !important;
+         }
+     }
+
  </style>
 
  @if (request()->routeIs('product'))
