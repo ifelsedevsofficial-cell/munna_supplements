@@ -7,7 +7,7 @@
  <meta name="description" content="">
 
  <!-- Place favicon.ico in the root directory -->
- <link rel="shortcut icon" type="image/x-icon" src="{{ asset('storage/' . $settings->site_logo) }}">
+ <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/' . $settings->site_logo) }}">
 
  <meta name="description"
      content="{{ $description ?? 'Munna Supplements offers high-quality supplements for fitness, muscle growth, weight loss, and overall health. Shop trusted products and boost your performance today.' }}">
