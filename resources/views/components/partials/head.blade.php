@@ -489,7 +489,8 @@
      }
 
      .marquee-box {
-         background: linear-gradient(90deg, #ffefc7, #ffe1d1);
+         background: white;
+         color: red;
          text-align: center;
          /* padding: 2px 5px; */
          font-family: 'Poppins', sans-serif;
