@@ -32,7 +32,7 @@
                         </svg>
 
                     </div>
-                    <div class="eg-menu__header-search d-xl-none" style="border-right: 0px">
+                    <div class="eg-menu__header-search d-lg-none" style="border-right: 0px">
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24" height="24" x="0"
                                 y="0" viewBox="0 0 6.35 6.35" style="enable-background: new 0 0 512 512"

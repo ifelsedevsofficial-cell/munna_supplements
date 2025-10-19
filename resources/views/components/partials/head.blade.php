@@ -131,6 +131,10 @@
              margin-inline: 30px !important;
              /* medium devices (tablet) */
          }
+
+         .search-box input {
+             width: 180px;
+         }
      }
 
      @media (max-width: 576px) {
@@ -308,7 +312,7 @@
      .search-box {
          position: absolute;
          top: 50%;
-         right: 0;
+         left: -60px;
          transform: translateY(-50%) scaleX(0);
          transform-origin: right;
          opacity: 0;
@@ -331,7 +335,7 @@
          border: none;
          outline: none;
          padding: 8px 12px;
-         width: 180px;
+         width: 260px;
          font-size: 14px;
      }
 
