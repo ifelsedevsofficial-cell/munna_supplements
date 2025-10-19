@@ -568,6 +568,10 @@
          }
      }
 
+     .eg-header__mobile-toggler {
+         width: 40px !important;
+         height: 40px !important;
+     }
  </style>
 
  @if (request()->routeIs('product'))
