@@ -3,7 +3,7 @@
     <div id="header-sticky" class="menu-area eg-header__area eg-header__transparent">
         <div class="container custom-container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-flex flex-row-reverse justify-content-between align-items-center d-lg-block">
                     <div class="eg-header__mobile-toggler d-block d-xl-none">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="25" x="0" y="0"
                             viewBox="0 0 32 32" style="enable-background: new 0 0 512 512" xml:space="preserve"
@@ -14,6 +14,20 @@
                                     fill="#fff" data-original="#fff" class=""></path>
                             </g>
                         </svg>
+                    </div>
+                    <div class="eg-menu__header-search d-xl-none" style="border-right: 0px">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24" height="24" x="0"
+                                y="0" viewBox="0 0 6.35 6.35" style="enable-background: new 0 0 512 512"
+                                xml:space="preserve" class="">
+                                <g>
+                                    <path
+                                        d="M2.894.511a2.384 2.384 0 0 0-2.38 2.38 2.386 2.386 0 0 0 2.38 2.384c.56 0 1.076-.197 1.484-.523l.991.991a.265.265 0 0 0 .375-.374l-.991-.992a2.37 2.37 0 0 0 .523-1.485C5.276 1.58 4.206.51 2.894.51zm0 .53c1.026 0 1.852.825 1.852 1.85S3.92 4.746 2.894 4.746s-1.851-.827-1.851-1.853.825-1.852 1.851-1.852z"
+                                        fill="#fff" data-original="#000000" class="">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
                     </div>
                     <div class="eg-menu__wrap">
                         <nav class="eg-menu__nav d-flex align-items-centers justify-content-between">
@@ -102,11 +116,12 @@
                                     @endif
                                 </a>
                             </div>
-                            <div class="eg-menu__header-search d-xl-none" style="border-right: 0px">
+                            {{-- <div class="eg-menu__header-search d-xl-none" style="border-right: 0px">
                                 <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24" height="24"
-                                        x="0" y="0" viewBox="0 0 6.35 6.35" style="enable-background: new 0 0 512 512"
-                                        xml:space="preserve" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24"
+                                        height="24" x="0" y="0" viewBox="0 0 6.35 6.35"
+                                        style="enable-background: new 0 0 512 512" xml:space="preserve"
+                                        class="">
                                         <g>
                                             <path
                                                 d="M2.894.511a2.384 2.384 0 0 0-2.38 2.38 2.386 2.386 0 0 0 2.38 2.384c.56 0 1.076-.197 1.484-.523l.991.991a.265.265 0 0 0 .375-.374l-.991-.992a2.37 2.37 0 0 0 .523-1.485C5.276 1.58 4.206.51 2.894.51zm0 .53c1.026 0 1.852.825 1.852 1.85S3.92 4.746 2.894 4.746s-1.851-.827-1.851-1.853.825-1.852 1.851-1.852z"
@@ -115,7 +130,7 @@
                                         </g>
                                     </svg>
                                 </a>
-                            </div>
+                            </div> --}}
                             <div class="eg-menu__header-actions d-flex align-items-center">
                                 <div class="d-none d-lg-block">
                                     <ul class="d-flex align-items-center">
@@ -201,6 +216,7 @@
                             </div>
                         </nav>
                     </div>
+
                     <!-- Mobile Menu  -->
                     <div class="eg-mobile__menu">
                         <nav class="eg-mobile__menu-box">
