@@ -1,11 +1,12 @@
        <div class="swiper-slide text-center mb-50 mt-50" wire:key="product-{{ $product->id }}">
-           <article class="eg-product__item text-center" itemscope itemtype="https://schema.org/Product">
+           <article class="eg-product__item text-center" style="position: relative;" itemscope
+               itemtype="https://schema.org/Product">
                <div class="eg-product__thumb">
                    <a href="{{ route('product', ['id' => $product->id, 'name' => Illuminate\Support\Str::slug($product->name)]) }}"
                        title="View details of {{ $product->name }}">
                        <img src="{{ asset("storage/$product->image") }}"
-                           alt="{{ $product->name }} - Buy Online at Best Price in Pakistan" class="img-fluid product-img"
-                           loading="lazy" itemprop="image"
+                           alt="{{ $product->name }} - Buy Online at Best Price in Pakistan"
+                           class="img-fluid product-img" loading="lazy" itemprop="image"
                            style="width: 100%;
     height: auto;
     max-height: 180px;
@@ -75,6 +76,30 @@
                            Buy Now
                        </a>
                    </div>
+
+                   <div class="eg-product__btn d-flex d-md-none align-items-center justify-content-center"
+                       style="/* transform: translateY(-210px); */position: absolute;top: 172px;right: 0;">
+                       <a wire:click="addToCart({{ $product->id }})" wire:loading.attr="disabled"
+                           class="eg-product__cart mr-6" style="cursor: pointer; margin-right: 2px;"
+                           title="Add {{ $product->name }} to Cart">
+                           <span><img src="{{ asset('assets/img/icon/cart.svg') }}" alt="Cart icon"></span>
+                       </a>
+                       <a class="eg-product__cart mr-15" wire:click="addToCartAndRedirect({{ $product->id }})"
+                           title="Buy {{ $product->name }} Now">
+                           <span style="background-color: #d32a36 !important;">
+                               {{-- <img src="{{ asset('assets/img/icon/cart.svg') }}" alt="Cart icon"> --}}
+                               {{-- Buy --}}
+                               <svg style="color:
+                               white;"
+                                   xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                   fill="none" stroke-width="2" stroke="currentColor" stroke-linecap="round"
+                                   stroke-linejoin="round">
+                                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                               </svg>
+                           </span>
+                       </a>
+                   </div>
+
                </div>
            </article>
        </div>
