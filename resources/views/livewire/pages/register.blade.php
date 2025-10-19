@@ -42,7 +42,7 @@
 
        <!-- login area start -->
        <section class="eg-login__area pb-120 p-relative z-index-1 fix">
-           <div style="height:100px;" class="d-md-none"></div>
+          <x-partials.box />
            <div class="container">
                <div class="row justify-content-center">
                    <div class="col-xl-6 col-lg-8">
