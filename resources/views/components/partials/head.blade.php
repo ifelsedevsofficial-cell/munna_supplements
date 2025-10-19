@@ -498,6 +498,10 @@
          height: 60px;
      }
 
+     .header-sticky {
+         margin-top: 50px !important;
+     }
+
      .marquee-text {
          position: absolute;
          top: 50%;
@@ -530,16 +534,21 @@
      @media (max-width: 768px) {
          .marquee-box {
              font-size: 0.95rem;
-             height: 55px;
+             height: 42px;
              padding: 10px 8px;
          }
+
+         .header-sticky {
+             margin-top: 42px !important;
+         }
+
      }
 
      @media (max-width: 480px) {
          .marquee-box {
              font-size: 0.85rem;
              height: auto;
-             min-height: 50px;
+             min-height: 42px;
              padding: 8px 6px;
          }
 
@@ -547,7 +556,7 @@
              width: 95%;
          }
      }
-</style>
+ </style>
 
  @if (request()->routeIs('product'))
      <style>

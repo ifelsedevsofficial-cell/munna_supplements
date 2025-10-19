@@ -9,9 +9,7 @@
             Supplements</a></div>
 </div>
 <header class="header">
-    <div id="header-sticky" class="menu-area eg-header__area eg-header__transparent"
-    style="margin-top: 50px !important;"
-    >
+    <div id="header-sticky" class="menu-area eg-header__area eg-header__transparent">
         <div class="container custom-container">
             <div class="row">
                 <div class="col-12 d-flex flex-row-reverse justify-content-between align-items-center d-lg-block">

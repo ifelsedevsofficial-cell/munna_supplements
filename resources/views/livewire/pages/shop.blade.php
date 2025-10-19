@@ -160,7 +160,8 @@
                     <div class="eg-product__info-top">
                         <div class="eg-product__showing-top pt-4 pt-lg-0">
                             <p class="eg-product__showing-text">Showing
-                                {{ $products->firstItem() }}–{{ $products->lastItem() }} of {{ $products->total() }}
+                                {{-- {{ $products->firstItem() }}–{{ $products->lastItem() }} of {{ $products->total() }} --}}
+                                {{ count($products) }}
                                 Results
                             </p>
                         </div>
@@ -182,9 +183,9 @@
                             </span>
                         @endforelse
                     </div>
-                    <div class="eg-postbox__pagination text-center">
+                    {{-- <div class="eg-postbox__pagination text-center">
                         {{ $products->links('vendor.pagination.default') }}
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
