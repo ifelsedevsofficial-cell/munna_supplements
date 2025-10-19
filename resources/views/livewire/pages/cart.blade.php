@@ -42,7 +42,7 @@
 
         <!-- cart-area-start -->
         <section class="eg-cart__area mb-95">
-            <div style="height:100px;" class="d-md-none"></div>
+            <x-partials.box />
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-xl-9 col-lg-8">

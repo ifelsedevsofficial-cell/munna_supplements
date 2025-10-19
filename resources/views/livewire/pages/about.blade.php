@@ -46,7 +46,7 @@
 
      <!-- about content -->
      <section class="eg-about__area mb-120">
-         <div style="height:100px;" class="d-md-none"></div>
+         <x-partials.box />
          <div class="container">
              <div class="row align-items-center">
                  <div class="col-md-6 mb-4">

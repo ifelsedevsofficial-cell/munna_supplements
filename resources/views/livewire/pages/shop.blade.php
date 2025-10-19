@@ -45,7 +45,7 @@
 
     <!-- product-area-start -->
     <section class="product-area pb-120">
-        <div style="height:100px;" class="d-md-none"></div>
+        <x-partials.box />
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-4">
