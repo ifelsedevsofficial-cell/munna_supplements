@@ -487,6 +487,42 @@
              height: 70vh;
          }
      }
+
+     .marquee-box {
+         background: linear-gradient(90deg, #ffefc7, #ffe1d1);
+         text-align: center;
+         /* padding: 2px 5px; */
+         font-family: 'Poppins', sans-serif;
+         font-size: 1rem;
+         font-weight: 500;
+         position: relative;
+         overflow: hidden;
+         height: 50px;
+     }
+
+     .marquee-text {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) scale(0.9);
+         opacity: 0;
+         transition: all 0.2s ease;
+     }
+
+     .marquee-text.active {
+         opacity: 1;
+         transform: translate(-50%, -50%) scale(1);
+     }
+
+     .marquee-text.hide {
+         opacity: 0;
+         transform: translate(-50%, -50%) scale(0.8);
+     }
+
+     .marquee-text a {
+         color: #d33;
+         text-decoration: underline;
+     }
  </style>
 
  @if (request()->routeIs('product'))

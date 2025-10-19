@@ -1,6 +1,17 @@
 <!-- header area start -->
+<div class="marquee-box" style="position: sticky;
+    z-index: 10;
+    top: 0px;">
+    <div class="marquee-text" id="text1"> Munna Supplements </div>
+    <div class="marquee-text" id="text2"> Get Big Discount On All products At Our Site </div>
+    <div class="marquee-text" id="text3"> Call Us: <a href="tel:‪+923001234567‬">‪+92 300 1234567‬</a></div>
+    <div class="marquee-text" id="text4"> Facebook: <a href="https://www.facebook.com/share/17A1YxHuHZ/">Munna
+            Supplements</a></div>
+</div>
 <header class="header">
-    <div id="header-sticky" class="menu-area eg-header__area eg-header__transparent">
+    <div id="header-sticky" class="menu-area eg-header__area eg-header__transparent"
+    style="margin-top: 50px !important;"
+    >
         <div class="container custom-container">
             <div class="row">
                 <div class="col-12 d-flex flex-row-reverse justify-content-between align-items-center d-lg-block">

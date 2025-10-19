@@ -1,5 +1,35 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>
+    const texts = [
+        document.getElementById('text1'),
+        document.getElementById('text2'),
+        document.getElementById('text3'),
+        document.getElementById('text4')
+    ];
+    let index = 0;
+
+    function showNext() {
+        // hide all first
+        texts.forEach(t => t.classList.remove('active', 'hide'));
+
+        // show current
+        const current = texts[index];
+        current.classList.add('active');
+
+        // hide after 3 seconds
+        setTimeout(() => current.classList.add('hide'), 28000);
+
+        // move to next
+        index = (index + 1) % texts.length;
+    }
+
+    // start animation
+    showNext();
+    setInterval(showNext, 2500); // total cycle = 2.5s per slide
+</script>
+
+
+<script>
     let heroSlides = document.querySelectorAll('.hero-slide');
     let current = 0;
 
