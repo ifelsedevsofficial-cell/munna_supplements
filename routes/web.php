@@ -10,13 +10,16 @@ use App\Livewire\Pages\Contact;
 use App\Livewire\Pages\Product;
 use App\Livewire\Pages\Checkout;
 use App\Livewire\Pages\Register;
+use App\Livewire\PrivacyPolicy;
+use App\Livewire\RefundPolicy;
+use App\Livewire\TermsOfService;
 use App\Livewire\Pages\ViewOrder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PDFController;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\PDFController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -76,3 +79,10 @@ Route::get('/about', About::class)->name('shop.about');
 Route::get('/contact', Contact::class)->name('shop.contact');
 
 Route::get('print/{model}/{id}/download', [PDFController::class, 'print'])->name('pdf.print');
+
+Route::get('/terms-of-service', TermsOfService::class)->name('service.terms');
+
+Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacy.policy');
+
+Route::get('/refund-policy', RefundPolicy::class)->name('refund.policy');
+

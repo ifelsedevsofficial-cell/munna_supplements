@@ -31,6 +31,9 @@
                                    <a href="{{ route('shop') }}">Products</a>
                                    <a href="{{ route('shop.about') }}">About</a>
                                    <a href="{{ route('shop.contact') }}">Contact</a>
+                                   <a href="{{ route('service.terms') }}">Terms and conditions</a>
+                                   <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
+                                   <a href="{{ route('refund.policy') }}">Refund Policy</a>
                                </div>
                            </div>
                        </div>

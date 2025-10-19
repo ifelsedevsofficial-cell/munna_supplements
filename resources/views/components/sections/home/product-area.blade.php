@@ -1,10 +1,19 @@
 @props(['products', 'category'])
 <!-- product area -->
 <section id="product" class="product__area eg-product__bg fix">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="eg-section text-center">
+                    <h2 class="eg-section__title">Featured Products</h2>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid" wire:ignore>
         <div class="swiper-container eg-product__active">
             <div class="swiper-wrapper">
-                @foreach ($category->products as $product)
+                @foreach ($products as $product)
                     <x-page-components.product :product="$product" />
                 @endforeach
             </div>

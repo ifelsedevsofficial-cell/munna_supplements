@@ -75,6 +75,45 @@
     </section>
     <!-- hero slider end -->
 
+    <!-- product area -->
+    {{-- <section id="product" class="product_area eg-product_bg fix"> --}}
+    {{-- <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="eg-section text-center">
+                        <h2 class="eg-section__title">Featured Products</h2>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+    {{-- <div class="container-fluid">
+            <div class="category-grid"> --}}
+    {{-- @foreach ($categories as $category) --}}
+    {{-- <div class="category-item">
+                    <div class="category-thumb">
+                        <a href="{{ route('shop', ['sub_category_id' => $category->id]) }}">
+                            <img src="{{ asset('storage/' . $category->image) }}"
+                                alt="{{ $category->name }} - Buy Online at Best Price in Pakistan" loading="lazy"
+                                itemprop="image">
+                        </a>
+                    </div>
+                    <div class="category-title">
+                        <a href="{{ route('shop', ['sub_category_id' => $category->id]) }}">
+                            {{ $category->name }}
+                        </a>
+                    </div>
+                </div> --}}
+    {{-- @endforeach --}}
+    {{-- </div>
+        </div> --}}
+
+    {{-- </section> --}}
+
+    {{-- @foreach ($categories as $category) --}}
+    <x-sections.home.product-area :products="$products" />
+    {{-- @endforeach --}}
+
     <!-- about area -->
     <section class="about__area eg-about__bg scene">
         <div class="container">
@@ -131,45 +170,6 @@
     </section>
     <!-- about area area -->
 
-    <!-- product area -->
-    <section id="product" class="product_area eg-product_bg fix">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="eg-section text-center">
-                        <h2 class="eg-section__title">Explore Our Categories</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="category-grid">
-                @foreach ($categories as $category)
-                    <div class="category-item">
-                        <div class="category-thumb">
-                            <a href="{{ route('shop', ['sub_category_id' => $category->id]) }}">
-                                <img src="{{ asset('storage/' . $category->image) }}"
-                                    alt="{{ $category->name }} - Buy Online at Best Price in Pakistan" loading="lazy"
-                                    itemprop="image">
-                            </a>
-                        </div>
-                        <div class="category-title">
-                            <a href="{{ route('shop', ['sub_category_id' => $category->id]) }}">
-                                {{ $category->name }}
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-    </section>
-
-    @foreach ($categories as $category)
-        <x-sections.home.product-area :category="$category" />
-    @endforeach
-
     <!-- feature area -->
     <section class="feature__area eg-feature__bg theme-bg scene">
         <div class="container">
@@ -224,8 +224,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-12">
                         <div class="eg-feature__thumb-wrap scene">
                             <div class="eg-feature__thumb-main">
-                                <img src="{{ asset('assets/img/feature/feature-thumb-01.png') }}"
-                                    alt="feature-thumb">
+                                <img src="{{ asset('assets/img/feature/feature-thumb-01.png') }}" alt="feature-thumb">
                             </div>
                             <div class="eg-feature__shape">
                                 <div class="eg-feature__shape-1">

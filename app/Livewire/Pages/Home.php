@@ -42,14 +42,16 @@ class Home extends Component
 
     public function render()
     {
-        $categories = SubCategory::with([
-            'products' => function ($query) {
-                $query->inRandomOrder()->take(6);
-            }
-        ])->get();
+        // $categories = SubCategory::with([
+        //     'products' => function ($query) {
+        //         $query->inRandomOrder()->take(6);
+        //     }
+        // ])->get();
+
+        $products = Product::inRandomOrder()->take(6)->get();
 
         return view('livewire.pages.home', [
-            'categories' => $categories,
+            'products' => $products,
         ]);
     }
 }

@@ -185,7 +185,7 @@
                                                     <li> <a href="{{ route('shop.logout') }}">logout</a></li>
                                                 @else
                                                     <li> <a href="{{ route('shop.login') }}">Login</a> </li>
-                                                    <li> <a href="{{ route('shop.register') }}">Singup</a></li>
+                                                    <li> <a href="{{ route('shop.register') }}">Signup</a></li>
                                                 @endauth
                                             </ul>
                                         </li>

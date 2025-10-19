@@ -136,17 +136,17 @@ document.addEventListener("click", (e) => {
         var scroll = $(window).scrollTop();
         var windowWidth = $(window).width();
 
-        if (windowWidth >= 992) {
-            // Desktop behavior
-            if (scroll < 100) {
-                $("#header-sticky").removeClass("header-sticky");
-            } else {
-                $("#header-sticky").addClass("header-sticky");
-            }
-        } else {
-            // Mobile: always sticky
-            $("#header-sticky").addClass("header-sticky");
-        }
+        // if (windowWidth >= 992) {
+        //     // Desktop behavior
+        //     if (scroll < 100) {
+        //         $("#header-sticky").removeClass("header-sticky");
+        //     } else {
+        //         $("#header-sticky").addClass("header-sticky");
+        //     }
+        // } else {
+        // Mobile: always sticky
+        $("#header-sticky").addClass("header-sticky");
+        // }
     }
 
     // Run on scroll
