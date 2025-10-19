@@ -52,26 +52,12 @@
     <!-- banner area end --> --}}
     <!-- hero slider start -->
     <section class="hero-slider" style="margin-bottom: 40px;">
-        <div class="hero-slide active" style="background-image: url('assets/img/banner/munna1.png');">
 
-        </div>
+        @foreach (['munna1.png', 'munna2.png', 'munna3.png', 'munna4.png', 'munna5.png', 'munna6.png', 'munna7.jpg', 'munna8.jpg', 'munna9.jpg'] as $imageName)
+            <div class="hero-slide" style="background-image: url('{{ asset('assets/img/banner/' . $imageName) }}');">
+            </div>
+        @endforeach
 
-        <div class="hero-slide" style="background-image: url('assets/img/banner/munna2.png');">
-
-        </div>
-
-        <div class="hero-slide" style="background-image: url('assets/img/banner/munna3.png');">
-
-        </div>
-        <div class="hero-slide" style="background-image: url('assets/img/banner/munna4.png');">
-
-        </div>
-        <div class="hero-slide" style="background-image: url('assets/img/banner/munna5.png');">
-
-        </div>
-        <div class="hero-slide" style="background-image: url('assets/img/banner/munna6.png');">
-
-        </div>
     </section>
     <!-- hero slider end -->
 
@@ -224,8 +210,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-12">
                         <div class="eg-feature__thumb-wrap scene">
                             <div class="eg-feature__thumb-main">
-                                <img src="{{ asset('assets/img/feature/feature-thumb-01.png') }}"
-                                    alt="feature-thumb">
+                                <img src="{{ asset('assets/img/feature/feature-thumb-01.png') }}" alt="feature-thumb">
                             </div>
                             <div class="eg-feature__shape">
                                 <div class="eg-feature__shape-1">
