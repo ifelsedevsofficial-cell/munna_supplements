@@ -4,7 +4,7 @@
     top: 0px;">
     <div class="marquee-text" id="text1"> Munna Supplements </div>
     <div class="marquee-text" id="text2"> Get Big Discount On All products At Our Site </div>
-    <div class="marquee-text" id="text3"> Call Us: <a href="tel:‪+923001234567‬">‪+92 300 1234567‬</a></div>
+    <div class="marquee-text" id="text3"> Call Us: <a href="tel:‪+923402501290‬">‪+923402501290‬</a></div>
     <div class="marquee-text" id="text4"> Facebook: <a href="https://www.facebook.com/share/17A1YxHuHZ/">Munna
             Supplements</a></div>
 </div>
@@ -125,7 +125,8 @@
                                         /* width: 120px; */
                                         /* height: 80px; */
                                         "
-                                            class="logo-header" src="{{ asset('storage/' . $settings->site_logo) }}"
+                                            class="logo-header" style="margin-right: 150px;"
+                                            src="{{ asset('storage/' . $settings->site_logo) }}"
                                             alt="{{ $settings->site_name }} logo">
                                     @else
                                         <span
@@ -170,7 +171,7 @@
                                                 <div x-data="{ cartCount: 0 }" x-init="// Update cart count and show toast on update
                                                 window.addEventListener('cart-updated', e => {
                                                     cartCount = e.detail[0].count;
-
+                                                
                                                     e.detail[0].showToast && Toastify({
                                                         text: e.detail[0].message || 'Cart updated.',
                                                         duration: 3000,

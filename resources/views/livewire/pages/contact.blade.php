@@ -58,9 +58,9 @@
                          or the contact details below.
                      </p>
                      <ul class="list-unstyled">
-                         <li><strong>Phone:</strong> ‪+92 300 1234567‬</li>
-                         <li><strong>Email:</strong> support@supex.com</li>
-                         <li><strong>Address:</strong> 123 Main Street, Karachi, Pakistan</li>
+                         <li><strong>Phone:</strong> ‪+92 340 2501290‬</li>
+                         <li><strong>Email:</strong>munnasupplements@gmail.com</li>
+                         <li><strong>Address:</strong> Munna Supplements, Shah Latif Town Karachi, Pakistan</li>
                      </ul>
                  </div>
 

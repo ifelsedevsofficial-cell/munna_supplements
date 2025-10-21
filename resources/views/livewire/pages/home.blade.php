@@ -7,7 +7,7 @@
                     <div class="eg-banner__wrap mt-70">
                         <div class="eg-banner__title-opacity d-flex justify-content-center">
                             <h2 class="title">Clean Gainer</h2>
-                        </div>
+                    </div>
                         <div class="eg-banner__thumb d-flex justify-content-center">
                             <div class="eg-banner__thumb-1"><img class="layer" data-depth="0.2"
                                     src="{{ asset('assets/img/banner/banner-img-1.png') }}" alt="banner-thumb"></div>
@@ -53,7 +53,12 @@
     <!-- hero slider start -->
     <section class="hero-slider" style="margin-bottom: 40px;">
 
-        @foreach (['munna1.png', 'munna2.png', 'munna3.png', 'munna4.png', 'munna5.png', 'munna6.png', 'munna7.jpg', 'munna8.jpg', 'munna9.jpg'] as $imageName)
+        @foreach ([
+        // 'munna1.png', 'munna2.png', 'munna3.png', 'munna4.png', 'munna5.png', 'munna6.png',
+        'munna7.jpg',
+        'munna8.jpg',
+        'munna9.jpg',
+    ] as $imageName)
             <div class="hero-slide" style="background-image: url('{{ asset('assets/img/banner/' . $imageName) }}');">
             </div>
         @endforeach
@@ -604,7 +609,7 @@
     </section>
     <!-- faq area end -->
 
-    <!-- testimonial area -->
+    {{-- <!-- testimonial area -->
     <section class="testimonial__area eg-testimonial__bg theme-bg p-relative scene">
         <h4 class="eg-testimonial__opacity-text">Client Testimonial</h4>
         <div class="container">
@@ -718,7 +723,7 @@
             </div>
         </div>
     </section>
-    <!-- testimonial area end -->
+    <!-- testimonial area end --> --}}
 
     {{-- <!-- blog area -->
     <section class="blog__area eg-blog__bg scene">

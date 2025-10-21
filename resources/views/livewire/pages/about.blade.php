@@ -54,13 +54,24 @@
                          class="img-fluid rounded-3 shadow">
                  </div>
                  <div class="col-md-6">
-                     <h3 class="mb-3">Welcome to Supex</h3>
+                     <h3 class="mb-3">Welcome to Munna Supplements</h3>
                      <p>
-                         Supex is your trusted partner in premium fitness supplements.
-                         Our mission is to provide high-quality, scientifically-backed
-                         products that help you achieve your health and fitness goals.
+                         At Munna Supplements, we believe in empowering your fitness goals
+                         with premium, authentic, and science-backed products. From protein to vitamins,
+                         we make sure you get the nutrients your body truly needs to perform and recover
+                         better.
                      </p>
+                     <h4 class="number mb-5">
+                         <a href="tel:+923402501290">+92 340 2501290</a>
+                     </h4>
+                     <h4 class="email mb-20">
+                         <a href="mailto:info@munnasupplements.com">munnasupplements@gmail.com</a>
+                     </h4>
                      <p>
+                         Munna Supplements, Shah Latif Town <br>
+                         Karachi, Pakistan
+                     </p>
+                     {{-- <p>
                          From whey protein to essential vitamins, we ensure every product
                          meets international standards of safety and effectiveness.
                          With Supex, your journey to a healthier lifestyle is supported
@@ -70,7 +81,7 @@
                          <li>✔ 100% Authentic Supplements</li>
                          <li>✔ Trusted by Athletes and Trainers</li>
                          <li>✔ Fast & Reliable Delivery</li>
-                     </ul>
+                     </ul> --}}
                  </div>
              </div>
          </div>
