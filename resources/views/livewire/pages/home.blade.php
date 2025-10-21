@@ -291,7 +291,7 @@
     </section>
     <!-- feature area end -->
 
-    <!-- brand area  -->
+    {{-- <!-- brand area  -->
     <section class="brand__area eg-brand__bg pt-125 pb-130 scene">
         <div class="container">
             <div class="row">
@@ -333,7 +333,7 @@
             <img class=" layer" data-depth="3" src="assets/img/brnad/brand-shape-2.png" alt="brand-shape">
         </div>
     </section>
-    <!-- brand area end  -->
+    <!-- brand area end  --> --}}
 
 
     {{-- <!-- pricing area -->

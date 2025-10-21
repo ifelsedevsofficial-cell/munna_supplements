@@ -122,11 +122,11 @@
                                 <a href="{{ route('shop.home') }}">
                                     @if ($settings->site_logo)
                                         <img style="
+                                        margin-right: 150px;
                                         /* width: 120px; */
                                         /* height: 80px; */
                                         "
-                                            class="logo-header" style="margin-right: 150px;"
-                                            src="{{ asset('storage/' . $settings->site_logo) }}"
+                                            class="logo-header" src="{{ asset('storage/' . $settings->site_logo) }}"
                                             alt="{{ $settings->site_name }} logo">
                                     @else
                                         <span
